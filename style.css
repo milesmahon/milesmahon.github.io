@@ -1,0 +1,110 @@
+/* animation */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+/* content */
+
+* {
+/*     squishes content together (no margin around the words) */
+    
+    margin: 0;
+    padding: 5px;
+    box-sizing: border-box;
+}
+/*remove styling of urls */
+a,
+a:focus,
+a:active {
+    text-decoration: none;
+    outline: none;
+    border: none;
+}
+body {
+    /* color of entire background of page */
+    background: #F7EBC9;
+}
+.logo {
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+    background: url(img/kirby.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.content {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    margin-top: 50px;
+    animation: fadeIn 1.5s;
+}
+h1 {
+    /* name in bold at top of content*/
+    
+    margin-top: 10px;
+    font-size: 24px;
+    color: #814906;
+    /* was fff */
+
+    letter-spacing: 1px;
+    font-family: 'Khula', sans-serif;
+    text-transform: uppercase;
+}
+p {
+    /* description under name */
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #D35823;    
+    font-weight: 300;
+    font-family: 'Open Sans', serif;
+}
+.contact {
+    /* "say hello" button */
+    margin-top: 10px;
+    font-size: 12px;
+    display: inline-block;
+    width: 250px;
+    padding: 10px 0;
+    text-transform: uppercase;
+    font-family: 'Khula', sans-serif;
+    color: #D35823;
+    border: 1px solid #F2CC96;
+    border-radius: 50px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+.contact:hover {
+    background: #F2CC96
+}
+/* social media buttons container (all at once) */
+
+.social {
+    margin-top: 20px;
+}
+/* each social media button individually */
+
+.social-link {
+    margin: 0 10px;
+    color: #F2CC96;
+    transition: all 0.2s ease;
+}
+.social-link:hover {
+    color: #D35823
+}
