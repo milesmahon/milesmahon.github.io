@@ -91,15 +91,15 @@ p {
     transition: all 0.2s ease;
 }
 .contact:hover {
-    border-color: rebeccapurple;
     background: #F2CC96
 }
 /* social media buttons container (all at once) */
-.social {
-    margin-top: 5px;
-}
 
+.social {
+    margin-top: 20px;
+}
 /* each social media button individually */
+
 .social-link {
     margin: 0 10px;
     color: #F2CC96;
@@ -112,8 +112,8 @@ p {
 /* sandbox addition */
 /* credit: https://codepen.io/NickyCDK/pen/AIonk */
 body{
-    background-image: url(img/kirby.png);
-    /*	background-image: url('http://www.wearewebstars.dk/codepen/img/s1.png'), url('http://www.wearewebstars.dk/codepen/img//s2.png'), url('http://www.wearewebstars.dk/codepen/img//s3.png');*/
+/*    background-image: url(img/kirby.png);*/
+    background-image: url('http://www.wearewebstars.dk/codepen/img/s1.png'), url('http://www.wearewebstars.dk/codepen/img//s2.png'), url('http://www.wearewebstars.dk/codepen/img//s3.png');
 	z-index:1;
 	animation: snow 10s linear infinite;
 }
