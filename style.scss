@@ -1,9 +1,17 @@
-/* animation */
+/* vars */
 
 $backgroundColor: #F7EBC9;
 $headerColor: #814906;
 $paragraphColor: #D35823;
 $socialLinkColor: #F2CC96;
+
+
+//$backgroundColor: #152A38;
+//$headerColor: #D83C65;
+//$paragraphColor: #D6CFB9;
+//$socialLinkColor: #E4E5DB;
+
+/* animation */
 
 @keyframes fadeIn {
     from {
@@ -44,6 +52,7 @@ body {
     /* color of entire background of page */
     background: $backgroundColor;
 }
+
 .logo {
     height: 100px;
     width: 100px;
