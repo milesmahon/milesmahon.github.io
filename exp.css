@@ -1,0 +1,43 @@
+/* content */
+* {
+  /*     squishes content together (no margin around the words) */
+/*  margin: 0;*/
+  padding: 5px;
+  box-sizing: border-box; }
+
+/*remove styling of urls */
+a,
+a:focus,
+a:active {
+  text-decoration: none;
+  border: none; 
+}
+
+font {
+    padding: 0
+}
+
+body {
+  /* color of entire background of page */
+  background: #F7EBC9; }
+
+.content {
+  text-align: justify;
+  position: relative;
+  z-index: 2;
+  animation: fadeIn 1.5s; }
+
+.social-link {
+    animation: fadeIn 1.5s;
+    font-size: 20px;
+    padding: 5px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {s
+        opacity: 1;
+    }
+}

@@ -82,7 +82,8 @@ p {
 
 /* social media buttons container (all at once) */
 .social {
-  margin-top: 20px; }
+  margin-top: 20px;
+  font-size: 20px; }
 
 /* each social media button individually */
 .social-link {
