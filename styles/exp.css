@@ -1,4 +1,10 @@
 /* content */
+:root {
+  --duration: 400ms;
+  --ease: cubic-bezier(0.19, 1, 0.22, 1);
+  --bounce: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+
 * {
   padding: 5px;
 }
@@ -21,19 +27,12 @@ body {
 
 .content {
   text-align: justify;
-/*  position: relative;*/
   animation: fadeIn 1.5s; 
   font-family: 'Playfair Display', sans-serif;
-  font-size: 17px;
-  line-height: 1.7;
-}
-
-#description {
-  color: #814906;
 }
 
 /* back button */
-.social-link {
+#back {
     animation: fadeIn 1.5s;
     font-size: 20px;
     padding: 5px;
@@ -48,12 +47,16 @@ body {
     }
 }
 
-#headline {
-    text-align: center;
+#quote {
+    text-align: justify;
+    text-justify: inter-word;
     background: -webkit-linear-gradient(cornflowerblue, #814906);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 0;
+    font-size: 18px;
+    line-height: 1.7;
 }
 
 #attribution {
@@ -62,3 +65,65 @@ body {
     color: #814906;
 }
 
+#description {
+  margin-top: 70px;
+  color: #814906;
+  line-height: 2.0;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+span {
+  padding: 0px;
+}
+
+em {
+  padding: 0px;
+}
+
+#copy-click {
+  position: relative;
+  padding-bottom: 2px;
+  text-decoration: none;
+  cursor: copy;
+  color: #484848;
+  border-bottom: 1px dashed #767676;
+  transition: background-color calc(var(--duration) * 2) var(--ease);
+}
+
+#copy-click::after {
+  font-style: normal;
+  font-size:15px;
+  content: attr(data-tooltip-text);
+  position: absolute;
+  bottom: calc(100% + 6px);
+  left: 50%;
+  padding: 6px 12px;
+  white-space: nowrap;
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 0 0 0 -12px rgba(0,0,0,0);
+  pointer-events: none;
+  backface-visibility: hidden;
+  opacity: 0;
+  transform: translate(-50%, 12px);
+  transition: 
+    box-shadow calc(var(--duration) / 1.5) var(--bounce),
+    opacity calc(var(--duration) / 1.5) var(--bounce),
+    transform calc(var(--duration) / 1.5) var(--bounce);
+}
+ 
+#copy-click.is-hovered::after {    
+    box-shadow: 0 4px 8px rgba(0,0,0,0.10);
+    opacity: 1;
+    transform: translate(-50%, 0);
+    transition-timing-function: var(--ease);
+}
+
+#copy-click.is-copied {
+  background-color: yellow;
+}
+
+#copy-click.is-copied::after { 
+  content: attr(data-tooltip-text-copied); 
+}
