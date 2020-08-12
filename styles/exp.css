@@ -73,6 +73,16 @@ body {
   text-justify: inter-word;
 }
 
+#open-source {
+  color: #BAABBD;
+  line-height: 2.0;
+  text-align: justify;
+  text-justify: inter-word;
+  letter-spacing: 1px;
+  position: fixed;
+  bottom: 0;
+}
+
 span {
   padding: 0px;
 }
