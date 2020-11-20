@@ -26,14 +26,16 @@ body {
 }
 
 .content {
-  text-align: justify;
-  animation: fadeIn 1.5s; 
+  text-align: center;
+  width: 75%;
+  margin:auto;
+  animation: fadeIn 3s; 
   font-family: 'Playfair Display', sans-serif;
 }
 
 /* back button */
 #back {
-    animation: fadeIn 1.5s;
+    animation: fadeIn 3s;
     font-size: 20px;
     padding: 5px;
 }
