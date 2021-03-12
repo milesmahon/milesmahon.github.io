@@ -17,14 +17,6 @@
   padding: 5px;
   box-sizing: border-box; }
 
-/*remove styling of urls */
-a,
-a:focus,
-a:active {
-  text-decoration: none;
-  outline: none;
-  border: none; }
-
 body {
   /* color of entire background of page */
   background: #F7EBC9; }
@@ -118,4 +110,20 @@ p {
   background-image: url("/img/snow1.png"), url("/img/snow2.png"), url("/img/snow3.png");
   z-index: 1;
   animation: snow 10s linear infinite; 
+}
+
+#copy-click {
+  position: relative;
+  text-decoration: none;
+  cursor: copy;
+  transition: background-color calc(var(--duration) * 2) var(--ease);
+}
+
+#copy-click.is-hovered::after {
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: #D35823;
+  font-weight: 300;
+  font-family: 'Open Sans', serif;
+  text-transform: none;
 }

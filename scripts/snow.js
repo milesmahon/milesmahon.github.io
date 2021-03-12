@@ -5,7 +5,7 @@ link.addEventListener('keypress', e => {
 });
 
 const clickInteraction = (e) => {
-    console.log("hey");
+    console.log("It's snowing :)");
     e.preventDefault();
     document.body.classList.add("is-snowing");
     setTimeout(() => document.body.classList.remove("is-snowing"), 5000);

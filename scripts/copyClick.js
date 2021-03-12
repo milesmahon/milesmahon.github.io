@@ -1,16 +1,16 @@
-const link = document.querySelector('#copy-click');
-link.addEventListener('click', e => clickInteraction(e));
-link.addEventListener('mouseover', e => e.target.classList.add("is-hovered"));
-link.addEventListener('mouseleave', e => {
+const linkCopy = document.querySelector('#copy-click');
+linkCopy.addEventListener('click', e => clickInteractionCopy(e));
+linkCopy.addEventListener('mouseover', e => e.target.classList.add("is-hovered"));
+linkCopy.addEventListener('mouseleave', e => {
     if (!e.target.classList.contains("is-copied")) {
         e.target.classList.remove("is-hovered"); 
     }
 });
-link.addEventListener('keypress', e => {
-if (e.keyCode === 13) clickInteraction(e);
+linkCopy.addEventListener('keypress', e => {
+if (e.keyCode === 13) clickInteractionCopy(e);
 });
 
-const clickInteraction = (e) => {
+const clickInteractionCopy = (e) => {
     e.preventDefault();
     copyToClipboard(e.target);
     e.target.classList.add("is-copied");

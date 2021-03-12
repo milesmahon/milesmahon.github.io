@@ -12,6 +12,7 @@
         <!--tell browser how to render the page - width of content = width of device. scale content to 1 on load-->
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="styles/style.css">
+        <link rel="stylesheet" href="styles/copy-click.css">
         <link href="https://fonts.googleapis.com/css?family=Khula|Open+Sans" rel="stylesheet">
     </head>
     <body>
@@ -23,10 +24,9 @@
             <div class="main">
                 <h1>Miles Mahon</h1>
                 <p>Software Engineer</p>
-                <a href="mailto:milesmahon@pm.me" class="contact">Say Hello</a>
+                <a id="copy-click" class="contact" data-tooltip-text="Add email to clipboard" data-tooltip-text-copied="✔ Copied to clipboard" data-copy-string="milesmahon@pm.me">Say Hello</a>
                 <div class="social">
-                    <a class="social-link" href="https://github.com/milesmahon"><i class="fab fa-github" aria-hidden="true"></i>
-                    </a>
+                    <a class="social-link" href="https://github.com/milesmahon"><i class="fab fa-github" aria-hidden="true"></i></a>
                     <a class="social-link" href="https://linkedin.com/in/miles-mahon"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
                     <a id="snow-sandbox" class="social-link" href=""><i class="fas fa-snowflake"></i></a>
                     <a id="sandbox" class="social-link" href="/exp"><i class="fas fa-flask"></i></a>
@@ -38,4 +38,5 @@
         </div>
     </body>
     <script src="scripts/snow.js"></script>
+    <script src="scripts/copyClick.js"></script>
 </html>
