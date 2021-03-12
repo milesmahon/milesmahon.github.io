@@ -94,6 +94,14 @@ p {
 .social-link:hover {
   color: #D35823; }
 
+#toki-pona-icon > img {
+  position: relative;
+  top: 8px;
+  width: 28px;
+  height: 32px;
+  overflow: hidden;
+}
+
 @keyframes snow {
   0% {
     background-position: 0px 0px, 0px 0px, 0px 0px; 
