@@ -14,10 +14,11 @@
   backface-visibility: hidden;
   opacity: 0;
   transform: translate(-50%, 12px);
-  transition: 
+  transition:
     box-shadow calc(var(--duration) / 1.5) var(--bounce),
     opacity calc(var(--duration) / 1.5) var(--bounce),
     transform calc(var(--duration) / 1.5) var(--bounce);
+  text-transform: none;
 }
   
 #copy-click.is-hovered::after {    
