@@ -1,41 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Miles Mahon</title>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
-        <!-- description of the site for search engines -->
-        <meta name="description" content="Miles' contact information." />
-        <!--favicon for the site's tab on browser-->
-        <link rel="icon" type="image/ico" href="img/favicon-32x32.png" sizes="32x32" />
-        <!--tell browser how to render the page - width of content = width of device. scale content to 1 on load-->
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="styles/style.css">
-        <link rel="stylesheet" href="styles/copy-click.css">
-        <link href="https://fonts.googleapis.com/css?family=Khula|Open+Sans" rel="stylesheet">
-    </head>
-    <body>
-        <!-- for positioning pushes everything down -->
-        <canvas></canvas>
-        <!-- the actual site content -->
-        <div class="content">
-            <a href="/" class="logo" loop="false"></a>
-            <div class="main">
-                <h1>Miles Mahon</h1>
-                <a id="copy-click" class="contact" data-tooltip-text="Add email to clipboard" data-tooltip-text-copied="✔ Copied to clipboard" data-copy-string="milesjmahon@gmail.com">Say Hello</a>
-                <div class="social">
-                    <a class="social-link" href="https://github.com/milesmahon"><i class="fab fa-github" aria-hidden="true"></i></a>
-                    <a class="social-link" href="https://linkedin.com/in/miles-mahon"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
-                    <a id="snow-sandbox" class="social-link" href=""><i class="fas fa-snowflake"></i></a>
-                    <a id="sandbox" class="social-link" href="/art"><i class="fas fa-brush"></i></a>
-                    <a id="toki-pona-icon" class="social-link" href="/nimi-ale-pona">
-                        <img src="/img/Toki_pona.svg"></img>
-                    </a>
-                </div>
-            </div>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Miles Mahon</title>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+      integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+      crossorigin="anonymous"
+    />
+    <!-- description of the site for search engines -->
+    <meta name="description" content="Miles' contact information." />
+    <!--favicon for the site's tab on browser-->
+    <link
+      rel="icon"
+      type="image/ico"
+      href="img/favicon-32x32.png"
+      sizes="32x32"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/copy-click.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Khula|Open+Sans"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- for positioning pushes everything down -->
+    <canvas></canvas>
+    <!-- the actual site content -->
+    <div class="content">
+      <div class="blob-cont">
+        <div class="yellow blob"></div>
+        <div class="red blob"></div>
+        <div class="green blob"></div>
+      </div>
+      <a href="/" class="logo grain" loop="false"></a>
+      <div class="main grain">
+        <h1>Miles Mahon</h1>
+        <a
+          id="copy-click"
+          class="contact"
+          data-tooltip-text="Add email to clipboard"
+          data-tooltip-text-copied="✔ Copied to clipboard"
+          data-copy-string="milesjmahon@gmail.com"
+          >Say Hello</a
+        >
+        <div class="social">
+          <a class="social-link" href="https://github.com/milesmahon"
+            ><i class="fab fa-github" aria-hidden="true"></i
+          ></a>
+          <a class="social-link" href="https://linkedin.com/in/miles-mahon"
+            ><i class="fab fa-linkedin-in" aria-hidden="true"></i
+          ></a>
+          <a id="sandbox" class="social-link" href="/art"
+            ><i class="fas fa-brush"></i
+          ></a>
         </div>
-    </body>
-    <script src="scripts/snow.js"></script>
-    <script src="scripts/copyClick.js"></script>
+      </div>
+    </div>
+  </body>
+  <script src="scripts/copyClick.js"></script>
 </html>
+
+<svg>
+  <defs>
+    <filter id="grain">
+      <feTurbulence
+        id="turb"
+        type="fractalNoise"
+        baseFrequency="0.0"
+        numOctaves="1"
+        result="turbulence"
+      />
+      <feDisplacementMap
+        xChannelSelector="R"
+        yChannelSelector="G"
+        scale="10"
+        in="SourceGraphic"
+        in2="warp"
+      />
+    </filter>
+  </defs>
+  <animate
+    xlink:href="#turb"
+    attributeName="baseFrequency"
+    from=".5"
+    to="0"
+    dur="1.5s"
+  />
+</svg>

@@ -7,7 +7,7 @@
   left: 50%;
   padding: 6px 12px;
   white-space: nowrap;
-  background-color: white;
+  background-color: var(--bg);
   border-radius: 4px;
   box-shadow: 0 0 0 -12px rgba(0,0,0,0);
   pointer-events: none;
@@ -22,14 +22,15 @@
 }
   
 #copy-click.is-hovered::after {    
-    box-shadow: 0 4px 8px rgba(0,0,0,0.10);
-    opacity: 1;
-    transform: translate(-50%, 0);
-    transition-timing-function: var(--ease);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.10);
+  opacity: 1;
+  transform: translate(-50%, 0);
+  transition-timing-function: var(--ease);
 }
 
 #copy-click.is-copied {
-  background-color: yellow;
+  background-color: var(--tertiary);
+  transition-timing-function: var(--ease);
 }
 
 #copy-click.is-copied::after { 

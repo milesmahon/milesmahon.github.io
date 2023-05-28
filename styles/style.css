@@ -3,6 +3,11 @@
   --duration: 400ms;
   --ease: cubic-bezier(0.19, 1, 0.22, 1);
   --bounce: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  --bg: #6D6875;
+  --text: #FFD6FF;
+  --primary: #BBD0FF;
+  --secondary: #C8B6FF;
+  --tertiary: #E7C6FF;
 }
 
 @keyframes fadeIn {
@@ -10,21 +15,12 @@
     opacity: 0; }
   to {
     opacity: 1; } }
-@keyframes fadeOut {
-  from {
-    opacity: 1; }
-  to {
-    opacity: 0; } }
+
 /* content */
 * {
-  /*     squishes content together (no margin around the words) */
   margin: 0;
   padding: 5px;
   box-sizing: border-box; }
-
-body {
-  /* color of entire background of page */
-  background: #F7EBC9; }
 
 .logo {
   height: 100px;
@@ -39,22 +35,22 @@ body {
   position: relative;
   z-index: 2;
   margin-top: 5%;
-  animation: fadeIn 1.5s; }
+  animation: fadeIn 3s ease; 
+}
 
 h1 {
   /* name in bold at top of content*/
   margin-top: 10px;
   font-size: 24px;
-  color: #814906;
+  color: var(--text);
   letter-spacing: 1px;
   font-family: 'Khula', sans-serif;
   text-transform: uppercase; }
 
 p {
-  /* description under name */
   font-size: 12px;
   letter-spacing: 1px;
-  color: #D35823;
+  color: var(--secondary);
   font-weight: 300;
   font-family: 'Open Sans', serif; }
 
@@ -67,8 +63,8 @@ p {
   padding: 10px 0;
   text-transform: uppercase;
   font-family: 'Khula', sans-serif;
-  color: #D35823;
-  border: 1px solid #F2CC96;
+  color: var(--text);
+  border: 1px solid var(--text);
   border-radius: 50px;
   letter-spacing: 1px;
   text-decoration: none;
@@ -76,7 +72,14 @@ p {
 }
 
 .contact:hover {
-  background: #F2CC96; }
+  background: var(--secondary); }
+
+#copy-click {
+  position: relative;
+  text-decoration: none;
+  cursor: copy;
+  transition: var(--bg) calc(var(--duration) * 2) var(--ease);
+}
 
 /* social media buttons container (all at once) */
 .social {
@@ -86,41 +89,104 @@ p {
 /* each social media button individually */
 .social-link {
   margin: 0 10px;
-  color: #F2CC96;
+  color: var(--tertiary);
   transition: all 0.2s ease; }
 
 .social-link:hover {
-  color: #D35823; }
+  color: var(--text); }
 
-#toki-pona-icon > img {
-  position: relative;
-  top: 8px;
-  width: 28px;
-  height: 32px;
+body {
   overflow: hidden;
+  max-width: 100%;
 }
 
-@keyframes snow {
-  0% {
-    background-position: 0px 0px, 0px 0px, 0px 0px; 
-  }
-  50% {
-    background-position: 500px 500px, 100px 200px, -100px 150px; 
-  }
-  100% {
-    background-position: 500px 1000px, 200px 400px, -100px 300px; 
-  } 
+/* animation stuff/effects */
+
+.blob-cont {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  max-width: 100%;
 }
 
-.is-snowing {
-  background-image: url("/img/snow1.png"), url("/img/snow2.png"), url("/img/snow3.png");
-  z-index: 1;
-  animation: snow 10s linear infinite; 
+.blob {
+  overflow: hidden;
+  border-radius: 100px;
+  filter: blur(60px);
 }
 
-#copy-click {
-  position: relative;
-  text-decoration: none;
-  cursor: copy;
-  transition: background-color calc(var(--duration) * 2) var(--ease);
+.grain {
+  filter: url(#grain);
+}
+
+.yellow {
+  background-color: var(--primary);
+  position: absolute;
+  top: 0px;
+  left: 400px;
+  height: 100px;
+  width: 150px;
+  
+  animation: yellow 12s infinite ease;
+}
+
+.green {
+  background-color: var(--tertiary);
+  position: absolute;
+  top: 80px;
+  right: 300px;
+  height: 150px;
+  width: 200px;
+  
+  animation: green 12s infinite ease;
+}
+
+.red {
+  background-color: var(--secondary);
+  position: absolute;
+  left: 500px;;
+  top: 300px;
+  height: 150px;
+  width: 100px;
+  
+  animation: red 12s infinite ease;
+}
+
+body::before,
+body::after {
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+
+  opacity: 90%;
+  background: var(--bg);
+}
+
+@keyframes yellow {
+  0% {top: 50px; left: 400px; transform: scale(1);}
+  250% {top: 200px; left: 350px; transform: scale(1.2);}
+  50% {top: 100px; left: 600px; transform: scale(1.3);}
+  75% {top: 250px; left: 500px; transform: scale(1);}
+  100% {top: 50px; left: 400px; transform: scale(1);}
+}
+
+@keyframes green {
+  0% {top: 10%; left: 55%; transform: scale(1.2);}
+  25% {top: 20%; left: 60%;transform: scale(1);}
+  50% {top: 15%; left: 55%;transform: scale(1);}
+  75% {top: 25%; left: 50%; transform: scale(1.2);}
+  100% {top: 10%; left: 55%; transform: scale(1.2);}
+}
+
+@keyframes red {
+  0% {top: 60%; right: 500px; transform: scale(1);}
+  30% {top: 45%; right: 350px;transform: scale(1.4);}
+  60% {top: 35%; right: 400px;transform: scale(1);}
+  100% {top: 40%; right: 300px; transform: scale(1);}
+  100% {top: 60%; right: 50%; transform: scale(1);}
 }
