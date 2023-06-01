@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Game demos</title>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+      integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+      crossorigin="anonymous"
+    />
+    <!-- description of the site for search engines -->
+    <meta name="description" content="Miles' game demos" />
+    <!--favicon for the site's tab on browser-->
+    <link
+      rel="icon"
+      type="image/ico"
+      href="img/favicon-32x32.png"
+      sizes="32x32"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/copy-click.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Khula|Open+Sans"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- the actual site content -->
+    <div class="content">
+      <!-- <a href="/" class="logo grain" loop="false"></a> -->
+      <div class="main grain">
+        <h1>Game demos</h1>
+        <p>
+          Short clips of game sketches and mechanics in Unity. Original
+          art/music/code.
+        </p>
+        <p></p>
+        <h2>Dialogue System</h2>
+        <video width="800" height="500" controls>
+          <source src="vid/DialogueGame.mp4" type="video/mp4" />
+        </video>
+        <p>Yarn Spinner dialogue demo with custom dialogue views.</p>
+        <h2>Rhythm Game</h2>
+        <video width="800" height="500" controls>
+          <source src="vid/bouncymusic.mp4" type="video/mp4" />
+        </video>
+        <p>Game in F major. Modifier keys change color and sound of bounces.</p>
+        <h2>Animation</h2>
+        <video width="800" height="500" controls>
+          <source src="vid/CatGame.mp4" type="video/mp4" />
+        </video>
+        <p>Rotoscoped cat minding its business.</p>
+      </div>
+    </div>
+  </body>
+</html>
+
+<svg>
+  <defs>
+    <filter id="grain">
+      <feTurbulence
+        id="turb"
+        type="fractalNoise"
+        baseFrequency="0.0"
+        numOctaves="1"
+        result="turbulence"
+      />
+      <feDisplacementMap
+        xChannelSelector="R"
+        yChannelSelector="G"
+        scale="10"
+        in="SourceGraphic"
+        in2="warp"
+      />
+    </filter>
+  </defs>
+  <animate
+    xlink:href="#turb"
+    attributeName="baseFrequency"
+    from=".5"
+    to="0"
+    dur="1.5s"
+  />
+</svg>
