@@ -26,6 +26,7 @@
       href="https://fonts.googleapis.com/css?family=Khula|Open+Sans"
       rel="stylesheet"
     />
+    <link href="https://vjs.zencdn.net/8.3.0/video-js.css" rel="stylesheet" />
   </head>
   <body>
     <!-- the actual site content -->
@@ -39,22 +40,44 @@
         </p>
         <p></p>
         <h2>Dialogue System</h2>
-        <video width="800" height="500" controls>
+        <video
+          class="video-js"
+          preload="auto"
+          width="800"
+          height="500"
+          controls
+          data-setup="{}"
+        >
           <source src="vid/DialogueGame.mp4" type="video/mp4" />
         </video>
         <p>Yarn Spinner dialogue demo with custom dialogue views.</p>
         <h2>Rhythm Game</h2>
-        <video width="800" height="500" controls>
+        <video
+          class="video-js"
+          preload="auto"
+          width="800"
+          height="500"
+          controls
+          data-setup="{}"
+        >
           <source src="vid/bouncymusic.mp4" type="video/mp4" />
         </video>
         <p>Game in F major. Modifier keys change color and sound of bounces.</p>
         <h2>Animation</h2>
-        <video width="800" height="500" controls>
+        <video
+          class="video-js"
+          preload="auto"
+          width="800"
+          height="500"
+          controls
+          data-setup="{}"
+        >
           <source src="vid/CatGame.mp4" type="video/mp4" />
         </video>
         <p>Rotoscoped cat minding its business.</p>
       </div>
     </div>
+    <script src="https://vjs.zencdn.net/8.3.0/video.min.js"></script>
   </body>
 </html>
 
