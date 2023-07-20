@@ -15,9 +15,19 @@
 
       gtag("config", "G-Z05781V1YE");
     </script>
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro&family=VT323&display=swap");
-    </style>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&family=VT323&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&family=VT323&display=swap"
+      media="print"
+      onload="this.media='all'"
+    />
     <meta charset="UTF-8" />
     <title>Miles Mahon</title>
     <meta charset="UTF-8" />
@@ -67,17 +77,23 @@
           >Email me</a
         >
         <div class="social">
-          <a class="social-link" href="https://github.com/milesmahon"
+          <a
+            name="github"
+            class="social-link"
+            href="https://github.com/milesmahon"
             ><i class="fab fa-github" aria-hidden="true"></i
           ></a>
-          <a class="social-link" href="https://linkedin.com/in/miles-mahon"
+          <a
+            name="linkedin"
+            class="social-link"
+            href="https://linkedin.com/in/miles-mahon"
             ><i class="fab fa-linkedin-in" aria-hidden="true"></i
           ></a>
           <!-- art hosted by /art git repo -->
-          <a id="sandbox" class="social-link" href="/art"
+          <a name="generative art" class="social-link" href="/art"
             ><i class="fas fa-brush"></i
           ></a>
-          <a id="sandbox" class="social-link" href="/games"
+          <a name="games portfolio" class="social-link" href="/games"
             ><i class="fas fa-gamepad"></i>
           </a>
         </div>
