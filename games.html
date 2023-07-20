@@ -39,17 +39,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="styles/style.css" />
     <link rel="stylesheet" href="styles/copy-click.css" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Khula|Open+Sans"
-      rel="stylesheet"
-    />
   </head>
   <a class="social-link" href="/"><i class="fas fa-arrow-left"></i></a>
 
-  <body>
+  <body style="overflow: visible; visibility: hidden">
     <!-- the actual site content -->
     <div class="content">
-      <!-- <a href="/" class="logo grain" loop="false"></a> -->
       <div class="main">
         <h1>Game demos</h1>
         <p>
@@ -59,15 +54,17 @@
         <p></p>
 
         <h2>Procedural Pathfinding Spider</h2>
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/l4I6w8Xji4E"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-        ></iframe>
+        <div class="videoWrapper">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/l4I6w8Xji4E"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
         <p>
           Work in progress. Spider pathfinds to the player on a navmesh. Legs
           are procedurally animated, raycasting to the ground to find foot
@@ -75,67 +72,48 @@
         </p>
 
         <h2>Dialogue System</h2>
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/rZaPmg-wwwE"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-        ></iframe>
+        <div class="videoWrapper">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/rZaPmg-wwwE"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
         <p>Yarn Spinner dialogue demo with custom dialogue views.</p>
+
         <h2>Rhythm Game</h2>
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/g-gG2tmdfRo"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-        ></iframe>
+        <div class="videoWrapper">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/g-gG2tmdfRo"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
         <p>Game in F major. Modifier keys change color and sound of bounces.</p>
+
         <h2>Animation</h2>
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/Mb2XIPkKf5w"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-        ></iframe>
+        <div class="videoWrapper">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/Mb2XIPkKf5w"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
         <p>Rotoscoped cat minding its business.</p>
       </div>
     </div>
   </body>
+  <script src="scripts/load.js"></script>
 </html>
-
-<svg>
-  <defs>
-    <filter id="grain">
-      <feTurbulence
-        id="turb"
-        type="fractalNoise"
-        baseFrequency="0.0"
-        numOctaves="1"
-        result="turbulence"
-      />
-      <feDisplacementMap
-        xChannelSelector="R"
-        yChannelSelector="G"
-        scale="10"
-        in="SourceGraphic"
-        in2="warp"
-      />
-    </filter>
-  </defs>
-  <animate
-    xlink:href="#turb"
-    attributeName="baseFrequency"
-    from=".5"
-    to="0"
-    dur="1.5s"
-  />
-</svg>
