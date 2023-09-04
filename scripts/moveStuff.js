@@ -18,4 +18,4 @@ function getRandomInt(min, max) {
 }
 
 var titleText = document.getElementById("titleText");
-setInterval(swapGarbageCharacter, 10, titleText);
+setInterval(swapGarbageCharacter, 3, titleText);
