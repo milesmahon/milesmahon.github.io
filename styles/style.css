@@ -229,3 +229,13 @@ body {
   max-width: 600px;
   aspect-ratio: 16 / 9;
 }
+
+.games {
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.game {
+  width:560px;
+}

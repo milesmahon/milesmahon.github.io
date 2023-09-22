@@ -47,76 +47,100 @@
   <body style="overflow: visible; visibility: hidden">
     <!-- the actual site content -->
     <div class="content">
-      <div class="main">
-        <h1>Game demos</h1>
-        <p>
-          Clips of game sketches and mechanics in Unity. Original
-          art/music/code.
-        </p>
-        <p></p>
-
-        <h2>Moose Arcade Game</h2>
-        <div class="videoWrapper">
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/eKGbPsuDRho"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-          ></iframe>
+      <h1>Game demos</h1>
+      <p>
+        Clips of game sketches and mechanics in Unity. Original art/music/code.
+      </p>
+      <p></p>
+      <div class="main games">
+        <div class="game">
+          <h2>Chromexto</h2>
+          <div>
+            <img src="img/chromexto.png" alt="Chromexto" width="560" />
+          </div>
+          <p>
+            A game about trying to describe colors. Distance of guess from the
+            true color is computed with CIELAB deltaE. Nextjs, Tailwind.<a
+              href="https://colors-gilt-chi.vercel.app/"
+              >Play the game.</a
+            >
+          </p>
         </div>
-        <p>
-          A bird defends a glowing orb from waves of moose using a dash attack.
-          Sprites by Penusbmic. Demo on
-          <a href="https://lavenham.itch.io/untitled-moose-game">itch.io</a>
-        </p>
 
-        <h2>Procedural Pathfinding Spider</h2>
-        <div class="videoWrapper">
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/l4I6w8Xji4E"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-          ></iframe>
+        <div class="game">
+          <h2>Moose Arcade Game</h2>
+          <div class="videoWrapper">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/eKGbPsuDRho"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <p>
+            2D movement, particle effects, AI navigation, UI. Sprites by
+            Penusbmic. Unity/C#. Demo on
+            <a href="https://lavenham.itch.io/untitled-moose-game">itch.io</a>
+          </p>
         </div>
-        <p>
-          Spider pathfinds to the player on a navmesh. Legs are procedurally
-          animated, raycasting to the ground to find foot placements.
-        </p>
 
-        <h2>Rhythm Game</h2>
-        <div class="videoWrapper">
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/g-gG2tmdfRo"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-          ></iframe>
+        <div class="game">
+          <h2>Procedural Pathfinding Spider</h2>
+          <div class="videoWrapper">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/l4I6w8Xji4E"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <p>
+            Spider pathfinds to the player on a navmesh. Legs are procedurally
+            animated, raycasting to the ground to find foot placements. Inverse
+            kinematics for leg joints. Unity/C#.
+          </p>
         </div>
-        <p>A game in Fmaj. Modifier keys change color and sound of bounces.</p>
 
-        <h2>Dialogue System</h2>
-        <div class="videoWrapper">
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/rZaPmg-wwwE"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-          ></iframe>
+        <div class="game">
+          <h2>Rhythm Game</h2>
+          <div class="videoWrapper">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/g-gG2tmdfRo"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <p>Modifier keys change color and sound of bounces. Unity/C#.</p>
         </div>
-        <p>Yarn Spinner dialogue demo with custom dialogue views.</p>
+
+        <div class="game">
+          <h2>Dialogue System</h2>
+          <div class="videoWrapper">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/rZaPmg-wwwE"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <p>
+            Yarn Spinner dialogue demo with custom dialogue views, text effects,
+            asynchronous animations. Unity/C#.
+          </p>
+        </div>
       </div>
     </div>
   </body>
