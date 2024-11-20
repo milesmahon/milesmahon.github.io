@@ -14,7 +14,7 @@ function Particle() {
   this.max_vel = 6;
   this.color_palette = ["#f08080", "#f4978e", "#f8ad9d", "#fbc4ab"];
   this.c = color(random(this.color_palette));
-  this.c.setAlpha(10);
+  this.c.setAlpha(5);
   this.prevPos = this.pos.copy();
 
   this.update = function () {
