@@ -33,6 +33,7 @@ const workProjects = [
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState<Page>('home');
+  const [hasLoaded, setHasLoaded] = useState(false);
 
   const NavBar = () => (
     <div className="pt-4 pb-8 flex justify-center gap-12 relative z-10 items-center">
@@ -150,16 +151,15 @@ export default function App() {
     <div className="h-screen w-full bg-[#1f1f1f] text-white overflow-hidden flex flex-col p-8">
       <NavBar />
 
-      <div className="flex-1 relative overflow-hidden rounded-xl">
-        <Image
-          src="img/header.webp"
-          alt="Photo of Lake Washington with Mount Rainier in the background. I took this photo!"
-          loading="eager"
-          className="w-full h-full object-cover opacity-70"
-        />
-        {/* darken image slightly */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/80" />
-
+      <div
+        className="flex-1 relative overflow-hidden rounded-xl"
+        style={{
+          backgroundImage:
+            'linear-gradient(180deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 55%, rgba(0,0,0,0.8) 100%), url(/img/header.webp)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="text-center">
             <h1 className="mb-2 text-white drop-shadow-lg text-lg">Miles, programmer</h1>
