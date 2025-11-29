@@ -3,6 +3,7 @@ var flow_field;
 var scl;
 var num_rows;
 var num_cols;
+var noiseStrength = 1.6;
 //var frame_rate;
 
 function setup() {
@@ -11,8 +12,7 @@ function setup() {
   canvas.style("z-index", "1");
 
   scl = 10; // lower is higher resolution
-  var increment = 0.1; // higher is more turbulence
-  var num_particles = 500;
+  var num_particles = 300;
   particles = [];
   //frame_rate = createP('');
 
@@ -24,11 +24,9 @@ function setup() {
   num_cols = ceil(width / scl);
   flow_field = new Array(num_rows * num_cols);
 
-  var y_offset = 0;
   for (var y = 0; y < num_rows; y++) {
-    var x_offset = 0;
     for (var x = 0; x < num_cols; x++) {
-      var n1 = noise(x_offset, y_offset) * TWO_PI * 4;
+      var n1 = noise(x / scl, y / scl) * noiseStrength;
       var v = p5.Vector.fromAngle(n1);
       //v.setMag(random(0, .5));
       flow_field[x + y * num_cols] = v;
@@ -41,9 +39,7 @@ function setup() {
       //line(0, 0, scl, 0);
       //pop();
 
-      x_offset += increment;
     }
-    y_offset += increment;
   }
 }
 

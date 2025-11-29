@@ -2,3 +2,5 @@
 devnotes.txt
 .vscode
 vid/
+dist/
+node_modules/
