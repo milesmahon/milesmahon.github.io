@@ -33,31 +33,32 @@ const workProjects = [
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState<Page>('home');
-  const [hasLoaded, setHasLoaded] = useState(false);
 
   const NavBar = () => (
-    <div className="pt-4 pb-8 flex justify-center gap-12 relative z-10 items-center">
+    <div className="pt-4 pb-8 flex items-center relative z-10">
       <button
         key="home"
         type="button"
         onClick={() => 'home' !== currentPage && setCurrentPage('home')}
-        className="absolute left-4 flex items-center"
+        className="absolute left-0 md:left-4 flex items-center"
         aria-label="logo"
       >
         <img src="img/logo.webp" alt="logo" className="h-16 w-auto" />
       </button>
-      {pages.map((page) => (
-        <button
-          key={page}
-          type="button"
-          onClick={() => page !== currentPage && setCurrentPage(page)}
-          className={`text-zinc-400 hover:text-white transition-colors tracking-wide ${
-            page === currentPage ? 'invisible pointer-events-none' : ''
-          }`}
-        >
-          {page}
-        </button>
-      ))}
+      <div className="ml-auto flex w-3/4 justify-between text-xs tracking-wide gap-2 md:m-auto md:m-base md:w-auto md:justify-center md:text-base md:gap-12">
+        {pages.map((page) => (
+          <button
+            key={page}
+            type="button"
+            onClick={() => page !== currentPage && setCurrentPage(page)}
+            className={`text-zinc-400 hover:text-white transition-colors ${
+              page === currentPage ? 'invisible pointer-events-none' : ''
+            }`}
+          >
+            {page}
+          </button>
+        ))}
+      </div>
     </div>
   );
 
@@ -68,10 +69,10 @@ export default function App() {
         <div className="flex-1 flex items-center justify-center">
           <div className="text-center max-w-md">
             <h1 className="mb-8">Contact</h1>
-            <div className="space-y-4">
+            <div className="space-y-4 md:text-base text-xs">
               <p className="text-zinc-400 inline">Email: </p>
               <CopyEmail
-                className="text-zinc-300 inline"
+                className="text-zinc-300 inline md:text-base text-xs"
                 text="milesjmahon at gmail dot com"
                 link="milesjmahon@gmail.com"
               />
@@ -113,11 +114,11 @@ export default function App() {
     return (
       <div className="h-screen w-full bg-[#1f1f1f] text-white overflow-hidden flex flex-col p-8">
         <NavBar />
-        <div className="flex-1 flex items-center justify-center gap-16">
+        <div className="flex-1 flex items-center justify-center gap-16 md:text-base text-sm">
           {workProjects.map((project, index) => (
             <div
               key={project.title}
-              className={`text-center max-w-md ${index !== 0 ? 'mt-16' : ''}`}
+              className={`md:text-center max-w-md ${index !== 0 ? 'mt-16' : ''}`}
             >
               <h1 className="mb-8">{project.title}</h1>
               <a href={project.href} target="_blank" rel="noreferrer" className="block group">
@@ -163,9 +164,7 @@ export default function App() {
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="text-center">
             <h1 className="mb-2 text-white drop-shadow-lg text-lg">Miles, programmer</h1>
-            <p className="text-zinc-200 drop-shadow-lg">
-              Available for web & software development.
-            </p>
+            <p className="text-zinc-200 drop-shadow-lg">Web & software development.</p>
           </div>
         </div>
       </div>
