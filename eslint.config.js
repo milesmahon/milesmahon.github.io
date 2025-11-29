@@ -3,6 +3,7 @@ import tsParser from '@typescript-eslint/parser';
 import tseslint from '@typescript-eslint/eslint-plugin';
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
+import globals from 'globals';
 
 export default [
   {
@@ -20,7 +21,7 @@ export default [
       ecmaVersion: 'latest',
       sourceType: 'module',
       globals: {
-        ...js.configs.recommended.languageOptions?.globals,
+        ...globals.browser,
       },
     },
     plugins: {

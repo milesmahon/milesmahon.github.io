@@ -5,6 +5,14 @@
 @tailwind components;
 @tailwind utilities;
 
+#root {
+  opacity: 0;
+  transition: opacity 150ms ease;
+}
+#root.ready {
+  opacity: 1;
+}
+
 :root {
   --font-size: 16px;
   --background: #ffffff;

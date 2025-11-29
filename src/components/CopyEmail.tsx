@@ -34,18 +34,21 @@ export function CopyEmail({ className = '', text, link }: CopyEmailProps) {
     .join(' ');
 
   return (
-    <button
+    <a
       id="copy-click"
-      type="button"
+      href={`mailto:${emailValue}`}
       data-copy-string={emailValue}
       data-tooltip-text="Copy email"
       data-tooltip-text-copied="Copied!"
       className={classes}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      onClick={copy}
+      onClick={(event) => {
+        event.preventDefault();
+        void copy();
+      }}
     >
       {emailLabel}
-    </button>
+    </a>
   );
 }

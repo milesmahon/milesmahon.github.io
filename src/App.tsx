@@ -5,18 +5,17 @@ import { CopyEmail } from './components/CopyEmail';
 
 type Page = 'home' | 'contact' | 'testimonials' | 'work';
 
-const pages: Page[] = ['contact', 'testimonials', 'work'];
-
+const pages: Page[] = ['contact', 'work', 'testimonials'];
 // const mosaicImages = [
-//   { src: 'img/heirloom.png', alt: 'Heirloom', caption: 'Hello world' },
-//   { src: 'img/header.jpg', alt: 'Nature', caption: 'Nature' },
-//   { src: 'img/mosaic.png', alt: 'Mosaic Puzzles', caption: 'Mosaic Puzzles' },
+//   { src: 'img/heirloom.webp', alt: 'Heirloom', caption: 'Hello world' },
+//   { src: 'img/header.webp', alt: 'Nature', caption: 'Nature' },
+//   { src: 'img/mosaic.webp', alt: 'Mosaic Puzzles', caption: 'Mosaic Puzzles' },
 // ];
 
 const workProjects = [
   {
     title: 'Heirloom',
-    src: 'img/heirloom.png',
+    src: 'img/heirloom.webp',
     alt: 'Heirloom',
     description:
       'A video book product with a React frontend and Go microservice backend for video, image, and audio processing.',
@@ -24,10 +23,10 @@ const workProjects = [
   },
   {
     title: 'Mosaic Puzzles',
-    src: 'img/mosaic.png',
+    src: 'img/mosaic.webp',
     alt: 'Mosaic Puzzles',
     description:
-      'A Ruby on Rails application managing puzzle manufacturing, order processing, and inventory management.',
+      'A Ruby on Rails application managing puzzle manufacturing, inventory, and order processing.',
     href: 'https://www.mosaicpuzzles.co/',
   },
 ];
@@ -44,7 +43,7 @@ export default function App() {
         className="absolute left-4 flex items-center"
         aria-label="logo"
       >
-        <img src="img/logo.png" alt="logo" className="h-16 w-auto" />
+        <img src="img/logo.webp" alt="logo" className="h-16 w-auto" />
       </button>
       {pages.map((page) => (
         <button
@@ -153,8 +152,9 @@ export default function App() {
 
       <div className="flex-1 relative overflow-hidden rounded-xl">
         <Image
-          src="img/header.jpg"
-          alt="Nature"
+          src="img/header.webp"
+          alt="Photo of Lake Washington with Mount Rainier in the background. I took this photo!"
+          loading="eager"
           className="w-full h-full object-cover opacity-70"
         />
         {/* darken image slightly */}
