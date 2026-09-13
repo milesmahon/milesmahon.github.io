@@ -3,9 +3,9 @@ import { Image } from './components/Image';
 import { CopyEmail } from './components/CopyEmail';
 // import { ImgStack } from 'img-stacks';
 
-type Page = 'home' | 'contact' | 'testimonials' | 'work';
+type Page = 'home' | 'contact' | 'work';
 
-const pages: Page[] = ['contact', 'work', 'testimonials'];
+const pages: Page[] = ['contact', 'work'];
 // const mosaicImages = [
 //   { src: 'img/heirloom.webp', alt: 'Heirloom', caption: 'Hello world' },
 //   { src: 'img/header.webp', alt: 'Nature', caption: 'Nature' },
@@ -13,12 +13,20 @@ const pages: Page[] = ['contact', 'work', 'testimonials'];
 // ];
 
 const workProjects = [
+  // {
+  //   title: 'UW GRIDLab',
+  //   src: 'img/gridlab.webp',
+  //   alt: 'UW GRIDLab',
+  //   description:
+  //     'Neuroscience research lab at the University of Washington focused on BCI and intracranial EEG research.',
+  //   href: 'https://depts.washington.edu/gridlab1/',
+  // },
   {
     title: 'Heirloom',
     src: 'img/heirloom.webp',
     alt: 'Heirloom',
     description:
-      'A video book product with a React frontend and Go microservice backend for video, image, and audio processing.',
+      'Video book product with a React frontend and Go microservice backend for video, image, and audio processing.',
     href: 'https://sendheirloom.com',
   },
   {
@@ -26,7 +34,7 @@ const workProjects = [
     src: 'img/mosaic.webp',
     alt: 'Mosaic Puzzles',
     description:
-      'A Ruby on Rails application managing puzzle manufacturing, inventory, and order processing.',
+      'Ruby on Rails application managing puzzle manufacturing, inventory, and order processing.',
     href: 'https://www.mosaicpuzzles.co/',
   },
 ];
@@ -45,7 +53,7 @@ export default function App() {
       >
         <img src="img/logo.webp" alt="logo" className="h-16 w-auto" />
       </button>
-      <div className="ml-auto flex w-3/4 justify-between text-xs tracking-wide gap-2 md:m-auto md:m-base md:w-auto md:justify-center md:text-base md:gap-12">
+      <div className="ml-auto flex w-3/4 justify-center text-xs tracking-wide gap-8 md:m-auto md:w-auto md:text-base md:gap-12">
         {pages.map((page) => (
           <button
             key={page}
@@ -77,32 +85,6 @@ export default function App() {
                 link="milesjmahon@gmail.com"
               />
               <p className="text-zinc-400">Seattle, WA</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-  }
-
-  if (currentPage === 'testimonials') {
-    return (
-      <div className="h-screen w-full bg-[#1f1f1f] text-white overflow-hidden flex flex-col p-8">
-        <NavBar />
-        <div className="flex-1 flex items-center justify-center">
-          <div className="max-w-2xl space-y-8">
-            <div className="border-l-2 border-zinc-700 pl-6">
-              <p className="mb-4 text-zinc-300">
-                "Miles is amazing! Very intelligent and knows a wide range of programming languages.
-                He was very responsive and I will continue using him for future projects."
-              </p>
-              <p className="text-zinc-500">— Andy Clor, Founder of Artistik Designs</p>
-            </div>
-            <div className="border-l-2 border-zinc-700 pl-6">
-              <p className="mb-4 text-zinc-300">
-                "Miles was a pleasure to work with! I was very impressed by his mastery of Scala and
-                attention to detail throughout this project."
-              </p>
-              <p className="text-zinc-500">— Michael Cohen, CohenChessClub</p>
             </div>
           </div>
         </div>
