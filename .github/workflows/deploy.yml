@@ -24,6 +24,8 @@ jobs:
           cache: 'yarn'
       - run: yarn install --frozen-lockfile
       - run: yarn build
+        env:
+          VITE_POSTHOG_KEY: ${{ vars.POSTHOG_KEY }}
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist

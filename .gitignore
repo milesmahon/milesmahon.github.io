@@ -4,3 +4,5 @@ devnotes.txt
 vid/
 dist/
 node_modules/
+.env
+.env.local
