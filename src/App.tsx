@@ -6,36 +6,23 @@ import { CopyEmail } from './components/CopyEmail';
 type Page = 'home' | 'contact' | 'work';
 
 const pages: Page[] = ['contact', 'work'];
-// const mosaicImages = [
-//   { src: 'img/heirloom.webp', alt: 'Heirloom', caption: 'Hello world' },
-//   { src: 'img/header.webp', alt: 'Nature', caption: 'Nature' },
-//   { src: 'img/mosaic.webp', alt: 'Mosaic Puzzles', caption: 'Mosaic Puzzles' },
-// ];
 
 const workProjects = [
-  // {
-  //   title: 'UW GRIDLab',
-  //   src: 'img/gridlab.webp',
-  //   alt: 'UW GRIDLab',
-  //   description:
-  //     'Neuroscience research lab at the University of Washington focused on BCI and intracranial EEG research.',
-  //   href: 'https://depts.washington.edu/gridlab1/',
-  // },
   {
-    title: 'Heirloom',
-    src: 'img/heirloom.webp',
-    alt: 'Heirloom',
+    title: 'Lanterns',
+    src: 'img/lanterns.webp',
+    alt: 'Lanterns puzzle board',
     description:
-      'Video book product with a React frontend and Go microservice backend for video, image, and audio processing.',
-    href: 'https://sendheirloom.com',
+      'A logic puzzle game with lanterns and lighting effects. Rust engine compiled to WebAssembly, rendered with WebGL2.',
+    href: 'https://lanterns.milesmahon.com',
   },
   {
-    title: 'Mosaic Puzzles',
-    src: 'img/mosaic.webp',
-    alt: 'Mosaic Puzzles',
+    title: 'epilens',
+    src: 'img/epilens.webp',
+    alt: 'epilens electrode planner',
     description:
-      'Ruby on Rails application managing puzzle manufacturing, inventory, and order processing.',
-    href: 'https://www.mosaicpuzzles.co/',
+      'Three.js app for 3D visualization of brain imaging with Python/Flask and Rust/Tauri.',
+    href: 'https://github.com/milesmahon/epilens',
   },
 ];
 
@@ -96,11 +83,11 @@ export default function App() {
     return (
       <div className="h-screen w-full bg-[#1f1f1f] text-white overflow-hidden flex flex-col p-8">
         <NavBar />
-        <div className="flex-1 flex items-center justify-center gap-16 md:text-base text-sm">
+        <div className="flex-1 min-h-0 overflow-y-auto flex flex-col md:flex-row items-center md:justify-center gap-16 pb-8 md:pb-0 md:text-base text-sm">
           {workProjects.map((project, index) => (
             <div
               key={project.title}
-              className={`md:text-center max-w-md ${index !== 0 ? 'mt-16' : ''}`}
+              className={`md:text-center max-w-md ${index !== 0 ? 'md:mt-16' : ''}`}
             >
               <h1 className="mb-8">{project.title}</h1>
               <a href={project.href} target="_blank" rel="noreferrer" className="block group">
